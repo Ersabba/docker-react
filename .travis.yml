@@ -10,13 +10,15 @@ before_install:
 script:
   - docker run -e CI=true docker-react-image npm run test -- --coverage
    
+   http://dockerlor-env.eba-js2mh2im.us-east-2.elasticbeanstalk.com/
+   
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
-  app: 'docker_test'
-  env: 'DockerTest-env'
+  app: 'docker_lor'
+  env: 'DockerLor-env'
   bucket_name: 'elasticbeanstalk-us-east-2-778019672386'
-  bucket_path: 'docker_test'
+  bucket_path: 'docker_lor'
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
