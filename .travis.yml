@@ -9,9 +9,7 @@ before_install:
 
 script:
   - docker run -e CI=true docker-react-image npm run test -- --coverage
-   
-   http://dockerlor-env.eba-js2mh2im.us-east-2.elasticbeanstalk.com/
-   
+    
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
